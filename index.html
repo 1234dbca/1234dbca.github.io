@@ -1,1 +1,68 @@
-<p>ERROE:There is noting here</p>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>网警抓他模拟器 9000</title>
+  <style>
+    body {
+      background: black;
+      color: limegreen;
+      font-family: "Courier New", monospace;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      font-size: 3em;
+      animation: blink 1s infinite;
+    }
+    @keyframes blink {
+      0%, 100% { color: red; }
+      50% { color: yellow; }
+    }
+    .form-section {
+      margin-top: 2em;
+    }
+    select, input, button {
+      font-size: 1.2em;
+      padding: 10px;
+      margin: 10px;
+    }
+    .result {
+      margin-top: 2em;
+      font-size: 1.5em;
+      color: cyan;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>🚨 网警抓他 🚨</h1>
+  <p>⚠ 本系统已接入国家互联网“反沙雕AI行为”中心</p>
+
+  <div class="form-section">
+    <label>嫌疑人代号：</label><br>
+    <input type="text" id="name" placeholder="输入名字，例如 张三"><br>
+    <label>举报理由：</label><br>
+    <select id="reason">
+      <option>在公共场合高谈 GPT 是自己开发的</option>
+      <option>半夜在群里发猫猫头不带图</option>
+      <option>拍照不洗胶卷</option>
+      <option>未经许可使用幻塔滤镜</option>
+    </select><br>
+    <button onclick="report()">🔍 举报</button>
+  </div>
+
+  <div class="result" id="result">
+    ✅ 已锁定目标：<span id="target"></span><br>
+    🚓 正在派出【虚拟现实网警巡逻队】前往你家隔壁星球。
+  </div>
+
+  <script>
+    function report() {
+      const name = document.getElementById('name').value || "匿名奇人";
+      document.getElementById('target').innerText = name;
+      document.getElementById('result').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
